@@ -4,7 +4,6 @@ import viteImagemin from 'vite-plugin-imagemin'
 import sassGlobImports from 'vite-plugin-sass-glob-import';
 import handlebars from 'vite-plugin-handlebars';
 import ejs from 'vite-plugin-ejs-engine';
-import precompiledEjs from 'vite-plugin-precompiled-ejs';
 // import glob from "glob";
 
 //Node.js基本機能「File System」
@@ -83,7 +82,6 @@ export default defineConfig({
   plugins: [
     sassGlobImports(),
     ejs(),
-    // precompiledEjs(),
     handlebars({
       //コンポーネントの格納ディレクトリを指定
       partialDirectory: resolve(__dirname, './src/components'),
