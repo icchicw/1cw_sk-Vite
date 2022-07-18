@@ -1,0 +1,15 @@
+@use "global" as *;
+@use "foundation";
+@use "object/**/*";
+
+.test {
+  font-size: rem(30);
+  color: $text-color;
+  @include mq(md) {
+    color: $text-primary;
+  }
+}
+
+.space {
+  margin-top: rem(40);
+}

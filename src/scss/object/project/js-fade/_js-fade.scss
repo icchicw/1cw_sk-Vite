@@ -1,0 +1,10 @@
+@use '../../../global' as *;
+@use "sass:math";
+@use "sass:color";
+
+
+.js-fadeUp,
+.js-fadeRight,
+.js-fadeLeft {
+  opacity: 0;
+}

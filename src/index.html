@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- noindex nofollow -->
+    <meta name="robots" content="noindex, nofollow" />
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    
+    <!-- title -->
+    <title>{{meta.top.title}}{{meta.separator}}{{meta.sitename}}</title>
+    <!-- meta情報 -->
+    <meta name="description" content="{{meta.top.description}}" />
+    <meta name="keywords" content="{{ meta.top.keywords }}" />
+    <!-- ogp -->
+    <meta property="og:title" content="{{ meta.top.title }}" />
+    <meta property="og:type" content="{{ meta.top.ogp_type }}" />
+    <meta property="og:url" content="{{ meta.top.ogp_url }}" />
+    <meta property="og:image" content="{{ meta.ogp_imgUrl }}" />
+    <meta property="og:site_name" content="{{ meta.sitename }}" />
+    <meta property="og:description" content="{{#if meta.top.ogp_description}}{{meta.top.ogp_description}}{{else}}{{meta.description}}{{/if}}" />
+    <meta name="twitter:card" content="{{ meta.twitter_card_size }}" />
+    <meta name="twitter:site" content="{{meta.twitter_user}}" />
+    <!-- favicon -->
+    {{> _favicon}}
+    
+    <!-- CSSの読み込みを追加 -->
+    <link rel="stylesheet" href="./scss/style.scss" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- JavaScript -->
+    <script type="module" src="./js/main.js"></script>
+    <script defer src="./assets/js/hige.js"></script>
+    <!-- library -->
+    {{> _library}}
+
+  </head>
+  <body>
+    {{> header}}
+    <div id="app"></div>
+    <p>test</p>
+    <img src="./assets/images/hoge.jpg" alt="">
+    <!-- <img src="./images/dummy.jpg" alt=""> -->
+    <div class="l-inner">
+      <p>aaaa</p>
+    </div>
+
+    <p>↓↓ボタン↓↓</p>
+    <!-- {{> _c-btn }} -->
+    <%- include('./components/_c-btn.html',{link:"google.co.jp", text:"ボタンです"}) %>
+    {{ data.date }}
+    
+    <p class="test">タイトル↓</p>
+    <h3 class="p-test-2nd">{{data.title}}</h3>
+
+    <p>JSONファイルから引っ張るテスト</p>
+    <p>{{data2}}</p>
+    <p>{{data2}}だよ</p>
+    <p>data => {{data}}</p>
+    <p>data.name => {{data.name}}</p>
+    <p>data.date => {{data.date}}</p>
+    <% const domain2 = "example.com" %>
+    <%= domain2 %>
+
+
+    <div class="space"></div>
+
+    <h3>pageData</h3>
+    <p>{{firstname}} {{lastname}}</p>
+    <h3>indexData</h3>
+    <p>{{first}} {{last}}</p>
+
+    <p>array↓↓↓</p>
+    {{#with array}}
+    <p>{{arraydata01}}</p>
+    {{/with}}
+    <p>{{arraydata01}}</p>
+    {{#each array}}
+    
+    {{/each}}
+    
+    <h3>array:{{array.arraydata01}}</h3>
+    <h3>name:{{date}}</h3>
+    <h3></h3>
+
+    {{#with con3ary}}
+    <p>{{ary01}}</p>
+    <p>{{ary02}}</p>
+    <p>{{ary03}}</p>
+    {{/with}}
+
+
+    <h3 class="kanako">momoclo</h3>
+    {{#each momoclo}}
+      <p class="secondary">{{firstname}}：{{lookup ../color firstname}}</p>
+    {{/each}}
+
+    
+    <h3>ab ( {{data.name}} )a</h3>
+    <h3>fuga =>  ( {{fuga.name}} )</h3>
+    
+
+
+
+
+
+    
+
+    <a href="./list.html">list.html</a>
+
+
+
+    
+    
+  </body>
+</html>
