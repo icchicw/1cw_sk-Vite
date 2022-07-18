@@ -1,5 +1,6 @@
 # 1cw_sk-vite
 - これは静的サイト用Vite環境です
+- sass関数使用例はsrc > scss > object > project > _p-sass-function.scss
 
 # COMMAND
 - `npm run dev`で開発環境起動
