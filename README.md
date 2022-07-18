@@ -10,7 +10,7 @@
 - 開発フォルダはsrcです
 - publicフォルダ内のファイルは圧縮されます
 - `src/public/assets/js/`にjsファイルがない場合は<font color="Red">package.json > scripts > build の`&& esbuild`以降を削除すること</font>
-- htmlを新規作成した場合はvite.config.js > defineConfig > build > input に追記すること
+- htmlを新規作成した場合はvite.config.js > defineConfig > build > input に追記すること<br>
 例：hoge.htmlを作成した場合
 `hoge: resolve(__dirname, './src/hoge.html'),`
 
