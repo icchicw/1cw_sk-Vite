@@ -14,6 +14,10 @@
 例：hoge.htmlを作成した場合
 `hoge: resolve(__dirname, './src/hoge.html'),`
 
+# meta
+- metaの中身はmeta.jsonで管理しています
+- ページが増えた場合は、適宜meta.jsonの中身とページ内の変数を変えてください
+
 # 画像圧縮
 - viteImageminで実行させてます
 
