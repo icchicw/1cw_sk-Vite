@@ -11,7 +11,10 @@
 
 # 注意点
 - 開発フォルダはsrcです
-- publicフォルダ内のファイルは圧縮されます
+- `<link rel="stylesheet" href="./scss/style.scss" />`のように直接scssを指定してください
+- `<script type="module" src="./js/main.js"></script>`は必ず記載してください
+- main.jsの名称を変更した際は、必ずvita.config.jsで設定を変更してください
+- publicフォルダ内のファイルは変換されず、そのままdistフォルダにコピーされます
 - `src/public/assets/js/`にjsファイルがない場合は<font color="Red">package.json > scripts > build の`&& esbuild`以降を削除すること</font>
 - htmlを新規作成した場合はvite.config.js > defineConfig > build > input に追記すること<br>
 例：hoge.htmlを作成した場合
