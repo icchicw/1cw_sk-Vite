@@ -7,7 +7,7 @@ module.exports = {
     '@fullhuman/postcss-purgecss': { //CSSファイルから未使用のスタイルを削除
       content: ['./src/**/*.html','./src/js/**/*.js'],
       //除外設定 https://purgecss.com/safelisting.html
-      safelist: ['hoge']
+      safelist: ['swiper-pagination-progressbar','swiper-pagination-progressbar-fill','swiper-pagination-bullet','swiper-button-prev','swiper-button-next']
     },
   }
 }
