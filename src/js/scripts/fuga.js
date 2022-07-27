@@ -1,5 +1,5 @@
 export function fuga() {
-  console.log('fugas');
 
+  console.log('fugas');
 
 }

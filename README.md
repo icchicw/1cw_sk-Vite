@@ -63,3 +63,5 @@
   - 例：`$('.swiper-pagination-progressbar .swiper-pagination-progressbar-fill').css('background', 'red');`
   - slick, splide等では未検証
   -①postcss.config.jsのsafelistにクラス名を入れる、②他のCSSを先に読み込み、style.scssを最後に読み込む で対応可能
+
+
