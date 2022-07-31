@@ -13,6 +13,26 @@ var data = JSON.parse(fs.readFileSync('./src/json/data.json', 'utf8'));
 var meta = JSON.parse(fs.readFileSync('./src/json/meta.json', 'utf8'));
 
 
+// HTMLの複数出力を自動化する
+//./src配下のファイル一式を取得
+const fileNameList = fs.readdirSync(resolve(__dirname, './src/'));
+
+//htmlファイルのみ抽出
+const htmlFileList = fileNameList.filter(file => /.html$/.test(file));
+
+//build.rollupOptions.inputに渡すオブジェクトを生成
+const inputFiles = {};
+for (let i = 0; i < htmlFileList.length; i++) {
+  const file = htmlFileList[i];
+  inputFiles[file.slice(0,-5)] = resolve(__dirname, './src/' + file );
+  /*
+    この形を自動的に作る
+    input:{
+      index: resolve(__dirname, './src/index.html'),
+      list: resolve(__dirname, './src/list.html')
+    }
+  */
+}
 
 
 //HTML上で出し分けたい各ページごとの情報
@@ -67,15 +87,8 @@ export default defineConfig({
         chunkFileNames: 'assets/js/[name].js',
         entryFileNames: 'assets/js/[name].js',
       },
-      input: {
-        index: resolve(__dirname, './src/index.html'),
-        /*
-        複数HTMLページを出力したい時にここへ追記していく
-        xxx: resolve(__dirname, './src/xxx.html'),
-        */
-        list: resolve(__dirname, './src/list.html'),
-        party: resolve(__dirname, './src/party.html'),
-      },
+      //生成オブジェクトを渡す
+      input: inputFiles,
 
     },
   },
