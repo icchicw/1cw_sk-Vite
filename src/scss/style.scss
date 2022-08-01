@@ -11,7 +11,8 @@
   background-image: url('../../assets/images/dummy.jpg');
   background-size: cover;
   background-position: center;
-  color: $text-color;
+  // color: $text-color;
+  color: #FFF;
   @include mq(md) {
   font-size: rem(30);
   color: $text-primary;

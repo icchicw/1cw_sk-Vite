@@ -17,17 +17,20 @@ html {
 	font-size: vw( 16, 375 );
 
 	@include mq("sp") {
-		font-size: 16px;
+		// font-size: 16px;
+		font-size: 10px;
 	}
 
 	//768px~inner（デフォルト）
 	@include mq("md") {
-		font-size: vw( 16, strip-unit($l-inner) );
+		// font-size: vw( 16, strip-unit($l-inner) );
+		font-size: vw( 10, strip-unit($l-inner) );
 	}
 
 	//inner~max-screen
 	@media (min-width: $l-inner) {
-		font-size: 16px;
+		// font-size: 16px;
+		font-size: 10px;
 	}
 }
 
