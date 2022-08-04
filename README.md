@@ -11,6 +11,7 @@
 - `npm run dev`で開発環境起動
   - ターミナルに表示される`> Local: http://localhost:****/`をcommand押しながらクリックしてください（自動で開きません）
 - `npm run build`でdistフォルダ作成（提出用ファイル）
+- `npm run build:terser`で<br />や<img />のスラッシュを取り除いた後distフォルダ作成（提出用ファイル）
 - ** package.jsonを参照すること **
 
 # 注意点
