@@ -7,7 +7,8 @@ import ejs from 'vite-plugin-ejs-engine';
 // import glob from "glob";
 
 //Node.js基本機能「File System」
-const fs = require('fs');
+//const fs = require('fs');
+import fs from 'fs';
 //JSON読み込み用
 var data = JSON.parse(fs.readFileSync('./src/json/data.json', 'utf8'));
 var meta = JSON.parse(fs.readFileSync('./src/json/meta.json', 'utf8'));
