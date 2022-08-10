@@ -1,4 +1,4 @@
-@use '../../global' as *;
+@use 'src/scss/global' as *;
 @use "sass:math";
 @use "sass:color";
 
@@ -26,17 +26,20 @@
 	// PC時
 	@include mq(md) {
 		font-size: rem(24);
-  }
+	}
+
 	// （例）800px以下の時
 	@include max(800) {
 		font-size: rem(24);
 		font-weight: bold;
 	}
+
 	// （例）1440px以上の時
 	@include min(1440) {
 		font-size: rem(24);
 		font-weight: bold;
 	}
+
 	// （例）1200px〜1440pxの時
 	@include range(1200, 1440) {
 		font-size: rem(24);
