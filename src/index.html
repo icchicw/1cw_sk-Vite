@@ -46,12 +46,16 @@
 
   <section>
     <div class="l-inner">
-      
-      <div id="app"></div>
-      <p class="test js-click">変更のテスト、ここをクリックしてね</p>
+
+      <a href="#display">to display</a>
+
+
+      <div class="space"></div>
+
+      <p class="test js-click js-fadeUp">変更のテスト、ここをクリックしてね</p>
       <img src="./assets/images/hoge.jpg" alt="">
       <img src="./assets/images/dummy.jpg" alt="">
-      
+
       <p>test</p>
 
       <p>swiper↓</p>
@@ -69,9 +73,77 @@
         <div class="swiper-pagination js-test-swiper-pagination"></div>
         <div class="swiper-scrollbar js-test-swiper-scrollbar"></div>
       </div>
-      
+
     </div>
   </section>
+
+  <div class="space"></div>
+
+  <section>
+    <div class="l-inner">
+
+      <!-- アクセシビリティ対応アコーディオン -->
+      <dl class="p-qa-list" role="tablist">
+        <div class="p-qa-list__item p-qa-item" role="tab">
+          <dt class="p-qa-item__question is-open js-question">
+            <button class="p-qa-item__btn js-qa-btn" type="button" role="tab" aria-controls="accordion-dummyNumber"
+              aria-selected="true" aria-expanded="true"> 質問文1が入ります </button>
+          </dt>
+          <dd class="p-qa-item__answer js-answer" role="tabpanel" id="accordion-dummyNumber1" aria-hidden="false">
+            答え1が入ります。 </dd>
+        </div>
+        <div class="p-qa-list__item p-qa-item" role="tab">
+          <dt class="p-qa-item__question is-open js-question">
+            <button class="p-qa-item__btn js-qa-btn" type="button" role="tab" aria-controls="accordion-dummyNumber"
+              aria-selected="true" aria-expanded="true">
+              質問文2が入ります。質問文2が入ります。質問文2が入ります。質問文2が入ります。質問文2が入ります。質問文2が入ります。質問文2が入ります。 </button>
+          </dt>
+          <dd class="p-qa-item__answer js-answer" role="tabpanel" id="accordion-dummyNumber2" aria-hidden="false">
+            答え2が入ります。<br>答え2が入ります。答え2が入ります。答え2が入ります。 </dd>
+        </div>
+        <div class="p-qa-list__item p-qa-item" role="tab">
+          <dt class="p-qa-item__question is-open js-question">
+            <button class="p-qa-item__btn js-qa-btn" type="button" role="tab" aria-controls="accordion-dummyNumber"
+              aria-selected="true" aria-expanded="true"> 質問文3が入ります。 </button>
+          </dt>
+          <dd class="p-qa-item__answer js-answer" role="tabpanel" id="accordion-dummyNumber3" aria-hidden="false">
+            答え3が入ります。答え3が入ります。答え3が入ります。 </dd>
+        </div>
+      </dl>
+
+      <div class="space"></div>
+
+      <!-- アクセシビリティ対応タブ -->
+      <ul class="p-tab-list" role="tablist">
+        <li class="p-tab-list__item">
+          <button class="p-tab-list__btn js-tab-btn" type="button" role="tab" aria-controls="tab-content-dummyNumber"
+            aria-selected="true">タブ1</button>
+        </li>
+        <li class="p-tab-list__item">
+          <button class="p-tab-list__btn js-tab-btn" type="button" role="tab" aria-controls="tab-content-dummyNumber"
+            aria-selected="false">タブ2</button>
+        </li>
+        <li class="p-tab-list__item">
+          <button class="p-tab-list__btn js-tab-btn" type="button" role="tab" aria-controls="tab-content-dummyNumber"
+            aria-selected="false">タブ3</button>
+        </li>
+      </ul>
+      <div class="p-tab-panel">
+        <div id="tab-content-dummyNumber" class="p-tab-panel__item js-tab-panel" role="tabpanel" aria-hidden="false">
+          <p>タブ1の内容がここに入ります。</p>
+        </div>
+        <div id="tab-content-dummyNumber" class="p-tab-panel__item js-tab-panel" role="tabpanel" aria-hidden="true">
+          <p>タブ2の内容がここに入ります。<br>タブ2の内容がここに入ります。</p>
+        </div>
+        <div id="tab-content-dummyNumber" class="p-tab-panel__item js-tab-panel" role="tabpanel" aria-hidden="true">
+          <p>タブ3の内容がここに入ります。</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="space"></div>
 
 
   <section>
@@ -82,8 +154,8 @@
         <p>{{ data.date }}</p>
 
 
-        <p class="test">タイトル↓</p>
-        <h3 class="p-test-2nd">{{data.title}}</h3>
+        <p class="test js-fadeLeft">タイトル↓</p>
+        <h3 class="p-test-2nd js-fadeIn">{{data.title}}</h3>
 
         <p>JSONファイルから引っ張るテスト</p>
         <p>{{data2}}</p>
@@ -135,6 +207,10 @@
 
 
     </div>
+  </section>
+
+  <section id="display">
+    ここに移動
   </section>
 </body>
 
