@@ -1,4 +1,4 @@
-@use '../global' as *;
+@use 'src/scss/global' as *;
 
 ////////////////////
 // リセットCSS
@@ -14,7 +14,7 @@
 ////////////////////
 html {
 	//375px~767px
-	font-size: vw( 16, 375 );
+	font-size: vw(10, 375);
 
 	@include mq("sp") {
 		// font-size: 16px;
@@ -24,7 +24,7 @@ html {
 	//768px~inner（デフォルト）
 	@include mq("md") {
 		// font-size: vw( 16, strip-unit($l-inner) );
-		font-size: vw( 10, strip-unit($l-inner) );
+		font-size: vw(10, strip-unit($l-inner));
 	}
 
 	//inner~max-screen
@@ -65,7 +65,7 @@ body {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 article,
@@ -288,15 +288,16 @@ summary {
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-   scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }
