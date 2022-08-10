@@ -20,10 +20,20 @@ $('.js-click').on('click', function() {
 //   },
 // });
 
+
+//ドロワーメニュー
+import { hamburgerDrawerVanilla } from './scripts/hamburgerDrawerVanilla';
+hamburgerDrawerVanilla();
+
+
+
 import { test_swiper } from './swiper/test_swiper';
 test_swiper();
 // import { fv_swiper } from './swiper/js-fv-swiper';
 // fv_swiper();
+
+import { viewHeight } from './scripts/viewHeight';
+viewHeight();
 
 import { hoge } from './scripts/hoge';
 hoge();

@@ -1,4 +1,4 @@
-@use '../../../global' as *;
+@use 'src/scss/global' as *;
 @use "sass:math";
 @use "sass:color";
 
@@ -17,11 +17,11 @@
   // margin: auto;
   box-shadow: 0 0 2rem transparent;
   z-index: 999;
-  
+
   background: transparent;
   border: none;
   padding: 15px;
-  
+
   @include mq(md) {
     display: none;
   }
@@ -70,10 +70,12 @@
   content: '';
   transition: ease .3s;
 }
+
 /* ハンバーガー上のラインの位置 */
 .p-hamburger__line::before {
   top: -8px;
 }
+
 /* ハンバーガー下のラインの位置 */
 .p-hamburger__line::after {
   top: 8px;
