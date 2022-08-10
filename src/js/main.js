@@ -8,7 +8,7 @@ import { headerScrolled } from './scripts/headerScrolled';
 headerScrolled();
 //スクロール後にヘッダーをトップに固定
 // import { headerScrolledFixed } from './scripts/headerScrolledFixed';
-headerScrolledFixed();
+// headerScrolledFixed();
 //スムーススクロール
 import { smoothScroll } from './scripts/smoothScroll';
 smoothScroll();
